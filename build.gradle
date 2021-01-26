@@ -60,7 +60,3 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
-
-test {
-    useJUnitPlatform()
-}
