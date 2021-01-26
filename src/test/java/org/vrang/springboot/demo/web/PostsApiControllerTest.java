@@ -32,6 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class PostsApiControllerTest
 {
+    
     @LocalServerPort
     private int port;
     
@@ -76,7 +77,7 @@ public class PostsApiControllerTest
         
         // when
         mvc.perform(post(url).contentType(MediaType.APPLICATION_JSON_UTF8)
-                            .content(new ObjectMapper( ).writeValueAsString(requestDto)))
+                             .content(new ObjectMapper( ).writeValueAsString(requestDto)))
            .andExpect(status( ).isOk( ));
         
         // then

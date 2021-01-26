@@ -51,6 +51,8 @@ dependencies {
 
     testAnnotationProcessor 'org.projectlombok:lombok'
     testImplementation      'org.projectlombok:lombok'
+
+    compile 'com.google.googlejavaformat:google-java-format:1.9'
 }
 
 configurations {
