@@ -2,4 +2,5 @@
 /.gradle/
 .gradle
 .idea
-application-oauth.yml
+application-oauth.yaml
+application-real-db.yaml
