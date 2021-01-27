@@ -13,7 +13,6 @@ import org.vrang.springboot.demo.web.dto.PostsUpdateRequestDto;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @RequiredArgsConstructor
 @Service
 public class PostsService
