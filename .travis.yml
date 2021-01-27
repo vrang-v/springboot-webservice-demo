@@ -1,11 +1,10 @@
 language: java
+jdk:
+  - openjdk8
 
 branches:
   only:
     - master
-
-before_install:
-  - chmod +x gradlew
 
 # Travis CI 서버의 Home
 cache:
@@ -13,7 +12,7 @@ cache:
    - '$HOME/.m2/repository'
    - '$HOME/.gradle'
 
-scrips: "./gradlew clean build"
+script: "./gradlew clean build"
 
 before_deploy:
   - mkdir -p before-deploy
@@ -25,7 +24,7 @@ before_deploy:
   - mv before-deploy/before-deploy.zip deploy/springboot-webservice.zip
 
 deploy:
-  - provider:             s3
+  - provider:            s3
     access_key_id:       $AWS_ACCESS_KEY
     secret_access_key:   $AWS_SECRET_KEY
     bucket:              springboot-web-service-build

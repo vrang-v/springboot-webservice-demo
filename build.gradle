@@ -31,7 +31,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
     // session
-    compile 'org.springframework.session:spring-session-jdbc:2.1.7.RELEASE'
+    compile 'org.springframework.session:spring-session-jdbc'
 
     // jpa
     compile 'com.h2database:h2'
